@@ -1,4 +1,11 @@
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
 import React, { useState } from 'react';
 
 import {
@@ -18,6 +25,11 @@ export default function Counter(): React.ReactElement {
 
   const increaseValue = Number(increaseAmount) || 0;
 
+  const [snackState, setSnackState] = React.useState(false);
+  const handleSnackClose = () => {
+    setSnackState(false);
+  };
+
   return (
     <Container>
       <Box>
@@ -33,13 +45,25 @@ export default function Counter(): React.ReactElement {
         <Button onClick={() => dispatch(increaseByAmount(increaseValue))}>
           Add Amount
         </Button>
-        <Button onClick={() => void dispatch(increaseAsync(increaseValue))}>
+        <Button
+          onClick={() => {
+            void dispatch(increaseAsync(increaseValue));
+            setSnackState(true);
+          }}
+        >
           Add Async
         </Button>
         <Button onClick={() => dispatch(increaseIfOdd(increaseValue))}>
           Add If Odd
         </Button>
       </Box>
+      <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        autoHideDuration={2000}
+        onClose={handleSnackClose}
+        open={snackState}
+        message="Loaded"
+      />
     </Container>
   );
 }

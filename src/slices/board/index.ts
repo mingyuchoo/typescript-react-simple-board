@@ -4,12 +4,12 @@ import { AppThunk, RootState } from '@/store';
 
 export interface BoardState {
   value: number;
-  status: 'IDLE' | 'LOADING' | 'ERROR';
+  loading: 'idle' | 'pending' | 'succeeded' | 'failed';
 }
 
 const initialState: BoardState = {
   value: 0,
-  status: 'IDLE',
+  loading: 'idle',
 };
 
 export const boardSlice = createSlice({

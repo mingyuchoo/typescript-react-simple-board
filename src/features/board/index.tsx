@@ -8,7 +8,7 @@ export default function Board(): React.ReactElement {
   const count = useAppSelector(selectCount);
 
   return (
-    <Container style={{ borderStyle: 'dashed', borderColor: 'blue' }}>
+    <Container>
       <Box>
         <Typography variant="body1">{count}</Typography>
       </Box>

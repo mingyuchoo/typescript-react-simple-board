@@ -5,12 +5,12 @@ import { AppThunk, RootState } from '@/store';
 
 export interface CounterState {
   value: number;
-  status: 'IDLE' | 'LOADING' | 'ERROR';
+  loading: 'idle' | 'pending' | 'succeeded' | 'failed';
 }
 
 const initialState: CounterState = {
   value: 0,
-  status: 'IDLE',
+  loading: 'idle',
 };
 
 export const increaseAsync = createAsyncThunk(
@@ -38,10 +38,10 @@ export const counterSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(increaseAsync.pending, (state) => {
-        state.status = 'LOADING';
+        state.loading = 'pending';
       })
       .addCase(increaseAsync.fulfilled, (state, action) => {
-        state.status = 'IDLE';
+        state.loading = 'idle';
         state.value += action.payload;
       });
   },
