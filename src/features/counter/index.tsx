@@ -1,3 +1,4 @@
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 import {
@@ -18,27 +19,27 @@ export default function Counter(): React.ReactElement {
   const increaseValue = Number(increaseAmount) || 0;
 
   return (
-    <div style={{ borderStyle: 'dashed', borderColor: 'blue' }}>
-      <div>
-        <button onClick={() => dispatch(decrease())}>-</button>
-        <span>{count}</span>
-        <button onClick={() => dispatch(increase())}>+</button>
-      </div>
-      <div>
-        <input
+    <Container>
+      <Box>
+        <Button onClick={() => dispatch(decrease())}>-</Button>
+        <Typography>{count}</Typography>
+        <Button onClick={() => dispatch(increase())}>+</Button>
+      </Box>
+      <Box>
+        <TextField
           value={increaseAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
-        <button onClick={() => dispatch(increaseByAmount(increaseValue))}>
+        <Button onClick={() => dispatch(increaseByAmount(increaseValue))}>
           Add Amount
-        </button>
-        <button onClick={() => void dispatch(increaseAsync(increaseValue))}>
+        </Button>
+        <Button onClick={() => void dispatch(increaseAsync(increaseValue))}>
           Add Async
-        </button>
-        <button onClick={() => dispatch(increaseIfOdd(increaseValue))}>
+        </Button>
+        <Button onClick={() => dispatch(increaseIfOdd(increaseValue))}>
           Add If Odd
-        </button>
-      </div>
-    </div>
+        </Button>
+      </Box>
+    </Container>
   );
 }

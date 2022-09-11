@@ -8,8 +8,9 @@ export const store = configureStore({
   reducer: { counter: counterReducer, board: boardReducer },
 });
 
-export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,
@@ -18,5 +19,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
 >;
 
 // Hooks
-export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
