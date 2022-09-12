@@ -1,8 +1,13 @@
 import React from 'react';
 
-import Body from '@/layouts/body';
+import { Index as Counter } from '@/features/counter';
+import { Index as Body } from '@/layouts/body';
 
-export default function Counter(): React.ReactElement {
+export function Index(): React.ReactElement {
   const title = 'Counter';
-  return <Body title={title} />;
+  return (
+    <Body title={title}>
+      <Counter />
+    </Body>
+  );
 }

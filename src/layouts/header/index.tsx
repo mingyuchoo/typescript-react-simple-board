@@ -8,14 +8,14 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-import SideBar from '@/components/sidebar';
-import TabBar from '@/components/tabbar';
+import { Index as SideBar } from '@/components/sidebar';
+import { Index as TabBar } from '@/components/tabbar';
 
 type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
 type THeaderProps = { title: string; links: TLinks };
 
-export default function Header(props: THeaderProps) {
+export function Index(props: THeaderProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (

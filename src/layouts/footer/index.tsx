@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
 import React from 'react';
 
-import Copyright from '@/components/copyright';
+import { Index as Copyright } from '@/components/copyright';
 
-export default function Footer() {
+export function Index() {
   return (
     <Box>
       <Copyright />

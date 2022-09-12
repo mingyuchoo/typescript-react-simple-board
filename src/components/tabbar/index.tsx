@@ -6,7 +6,7 @@ type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
 type TTabBarProps = { links: TLinks };
 
-export default function TabBar(props: TTabBarProps) {
+export function Index(props: TTabBarProps) {
   const [tabIndex, setTabIndex] = useState(-1);
   return (
     <Tabs

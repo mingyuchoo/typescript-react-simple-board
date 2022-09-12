@@ -2,8 +2,8 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Footer from '@/layouts/footer';
-import Header from '@/layouts/header';
+import { Index as Footer } from '@/layouts/footer';
+import { Index as Header } from '@/layouts/header';
 
 type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
@@ -14,11 +14,11 @@ const links: TLinks = [
   { to: '/counter', text: 'Counter' },
   { to: '/blog', text: 'Blog' },
   { to: '/about-us', text: 'About Us' },
-  { to: '/login', text: 'Login' },
-  { to: '/sign-up', text: 'Sign Up' },
+  { to: '/signin', text: 'Signin' },
+  { to: '/signup', text: 'Signup' },
 ];
 
-export default function Home(): React.ReactElement {
+export default function App(): React.ReactElement {
   const title = 'TypeScript React Simple Board';
   return (
     <Grid

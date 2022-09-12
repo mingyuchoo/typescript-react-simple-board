@@ -14,7 +14,7 @@ type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
 type TSideBarProps = { links: TLinks };
 
-export default function SideBar(props: TSideBarProps) {
+export function Index(props: TSideBarProps) {
   const [open, setOpen] = useState(false);
   return (
     <>
