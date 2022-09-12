@@ -14,7 +14,7 @@ export default function TabBar(props: TTabBarProps) {
       textColor="inherit"
       value={tabIndex}
       indicatorColor="secondary"
-      onChange={(event, value) => setTabIndex(value as number)}
+      onChange={(_event, value) => setTabIndex(value as number)}
     >
       {props.links.map((element, index) => (
         <Tab

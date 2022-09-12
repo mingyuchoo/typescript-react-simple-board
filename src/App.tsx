@@ -1,7 +1,8 @@
-import { Container } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
+import Footer from '@/layouts/footer';
 import Header from '@/layouts/header';
 
 type TLink = { to: string; text: string };
@@ -18,10 +19,23 @@ const links: TLinks = [
 ];
 
 export default function Home(): React.ReactElement {
+  const title = 'TypeScript React Simple Board';
   return (
-    <Container>
-      <Header title="TRSB" links={links} />
-      <Outlet />
-    </Container>
+    <Grid
+      container
+      direction="column"
+      justifyContent="flex-start"
+      alignItems="stretch"
+    >
+      <Grid item xs={12}>
+        <Header title={title} links={links} />
+      </Grid>
+      <Grid item xs={12}>
+        <Outlet />
+      </Grid>
+      <Grid item xs={12}>
+        <Footer />
+      </Grid>
+    </Grid>
   );
 }
