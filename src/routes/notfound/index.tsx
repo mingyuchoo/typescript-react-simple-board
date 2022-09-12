@@ -1,12 +1,8 @@
-import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 
+import Body from '@/layouts/body';
+
 export default function NotFound(): React.ReactElement {
-  return (
-    <Container>
-      <Box>
-        <Typography variant="h1">Page Not Found</Typography>
-      </Box>
-    </Container>
-  );
+  const title = 'Page Not Found';
+  return <Body title={title} />;
 }

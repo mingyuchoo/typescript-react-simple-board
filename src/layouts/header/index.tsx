@@ -13,18 +13,9 @@ import TabBar from '@/components/tabbar';
 
 type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
+type THeaderProps = { title: string; links: TLinks };
 
-const links: TLinks = [
-  { to: '/home', text: 'Home' },
-  { to: '/board', text: 'Board' },
-  { to: '/counter', text: 'Counter' },
-  { to: '/blog', text: 'Blog' },
-  { to: '/about-us', text: 'About Us' },
-  { to: '/login', text: 'Login' },
-  { to: '/sign-up', text: 'Sign Up' },
-];
-
-export default function Header() {
+export default function Header(props: THeaderProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
@@ -32,9 +23,13 @@ export default function Header() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            TRSB
+            {props.title}
           </Typography>
-          {isMobile ? <SideBar links={links} /> : <TabBar links={links} />}
+          {isMobile ? (
+            <SideBar links={props.links} />
+          ) : (
+            <TabBar links={props.links} />
+          )}
         </Toolbar>
       </AppBar>
     </Box>

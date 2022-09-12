@@ -1,12 +1,8 @@
-import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 
+import Body from '@/layouts/body';
+
 export default function Counter(): React.ReactElement {
-  return (
-    <Container>
-      <Box>
-        <Typography variant="h1">Counter</Typography>
-      </Box>
-    </Container>
-  );
+  const title = 'Counter';
+  return <Body title={title} />;
 }
