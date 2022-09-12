@@ -3,7 +3,7 @@ import React from 'react';
 
 type TBodyProps = { title: string; children: React.ReactElement };
 
-export function Index(props: TBodyProps): React.ReactElement {
+export function Body(props: TBodyProps): React.ReactElement {
   return (
     <Container>
       <Grid

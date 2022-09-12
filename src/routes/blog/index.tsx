@@ -1,13 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-import { Index as Blog } from '@/features/blog';
-import { Index as Body } from '@/layouts/body';
+import { Body } from '@/layouts/Body';
+import { Detail } from '@/routes/blog/Detail';
+import { List } from '@/routes/blog/List';
 
 export function Index(): React.ReactElement {
   const title = 'Blog';
-  return (
-    <Body title={title}>
-      <Blog />
-    </Body>
-  );
+  const { id } = useParams();
+  return <Body title={title}>{id ? <Detail id={id} /> : <List />}</Body>;
 }

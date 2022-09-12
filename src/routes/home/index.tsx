@@ -1,13 +1,13 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-import { Index as Body } from '@/layouts/body';
+import { Body } from '@/layouts/Body';
 
 export function Index(): React.ReactElement {
   const title = 'Home';
   return (
     <Body title={title}>
-      <Typography variant="h2">Sub title</Typography>
+      <Typography variant="h2">Contents</Typography>
     </Body>
   );
 }

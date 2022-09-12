@@ -8,14 +8,14 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-import { Index as SideBar } from '@/components/sidebar';
-import { Index as TabBar } from '@/components/tabbar';
+import { Sidebar } from '@/components/Sidebar';
+import { Tabbar } from '@/components/Tabbar';
 
 type TLink = { to: string; text: string };
 type TLinks = Array<TLink>;
 type THeaderProps = { title: string; links: TLinks };
 
-export function Index(props: THeaderProps) {
+export function Header(props: THeaderProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
@@ -26,9 +26,9 @@ export function Index(props: THeaderProps) {
             {props.title}
           </Typography>
           {isMobile ? (
-            <SideBar links={props.links} />
+            <Sidebar links={props.links} />
           ) : (
-            <TabBar links={props.links} />
+            <Tabbar links={props.links} />
           )}
         </Toolbar>
       </AppBar>

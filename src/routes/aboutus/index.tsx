@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Index as AboutUs } from '@/features/aboutus';
-import { Index as Body } from '@/layouts/body';
+import { Body } from '@/layouts/Body';
+import { List } from '@/routes/aboutus/List';
 
 export function Index(): React.ReactElement {
   const title = 'About Us';
   return (
     <Body title={title}>
-      <AboutUs />
+      <List />
     </Body>
   );
 }

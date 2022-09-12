@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Index as Body } from '@/layouts/body';
+import { Body } from '@/layouts/Body';
 
 export function Index(): React.ReactElement {
   const title = 'Page Not Found';

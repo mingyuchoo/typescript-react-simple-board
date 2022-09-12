@@ -18,7 +18,7 @@ import {
 } from '@/slices/counter';
 import { useAppDispatch, useAppSelector } from '@/store';
 
-export function Index(): React.ReactElement {
+export function List(): React.ReactElement {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [increaseAmount, setIncrementAmount] = useState('2');
