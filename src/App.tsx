@@ -45,14 +45,27 @@ export default function App(): React.ReactElement {
         direction="column"
         justifyContent="flex-start"
         alignItems="stretch"
+        style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
       >
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
+        >
           <Header title={title} links={links} />
         </Grid>
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
+        >
           <Outlet />
         </Grid>
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
+        >
           <Footer />
         </Grid>
       </Grid>
