@@ -10,40 +10,46 @@ export function ActionBox() {
       <Grid
         container
         direction="row"
+        justifyContent="flex-end"
         alignItems="center"
-        justifyContent="space-around"
+        style={{ borderStyle: 'dotted', borderColor: 'red' }}
+        marginLeft={4}
+        marginRight={4}
       >
         <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
           item
           xs={12}
           md={4}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
         >
           <Fab color="primary" aria-label="add">
             <AddIcon />
           </Fab>
         </Grid>
         <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
           item
           xs={12}
           md={4}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
         >
           <Fab color="default" aria-label="edit">
             <EditIcon />
           </Fab>
         </Grid>
         <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
           item
           xs={12}
           md={4}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
         >
           <Fab color="default" aria-label="remove">
             <DeleteIcon />

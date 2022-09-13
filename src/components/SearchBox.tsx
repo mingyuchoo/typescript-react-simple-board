@@ -8,8 +8,9 @@ export function SearchBox() {
       <Grid
         container
         direction="row"
+        justifyContent="center"
         alignItems="center"
-        justifyContent="space-around"
+        style={{ borderStyle: 'dotted', borderColor: 'red' }}
       >
         <Grid
           container

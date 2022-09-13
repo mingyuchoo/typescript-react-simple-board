@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Snackbar,
-  TextField,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Snackbar, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 import {
@@ -31,7 +24,7 @@ export function List(): React.ReactElement {
   };
 
   return (
-    <Container>
+    <Box>
       <Box>
         <Button onClick={() => dispatch(decrease())}>-</Button>
         <Typography>{count}</Typography>
@@ -64,6 +57,6 @@ export function List(): React.ReactElement {
         open={snackState}
         message="Loaded"
       />
-    </Container>
+    </Box>
   );
 }
