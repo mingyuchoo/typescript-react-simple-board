@@ -1,14 +1,7 @@
 import { Box, Button, Snackbar, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
-import {
-  decrease,
-  increase,
-  increaseAsync,
-  increaseByAmount,
-  increaseIfOdd,
-  selectCount,
-} from '@/slices/counter';
+import { decrease, increase, increaseAsync, increaseByAmount, increaseIfOdd, selectCount } from '@/slices/counter';
 import { useAppDispatch, useAppSelector } from '@/store';
 
 export function List(): React.ReactElement {
@@ -31,13 +24,8 @@ export function List(): React.ReactElement {
         <Button onClick={() => dispatch(increase())}>+</Button>
       </Box>
       <Box>
-        <TextField
-          value={increaseAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)}
-        />
-        <Button onClick={() => dispatch(increaseByAmount(increaseValue))}>
-          Add Amount
-        </Button>
+        <TextField value={increaseAmount} onChange={(e) => setIncrementAmount(e.target.value)} />
+        <Button onClick={() => dispatch(increaseByAmount(increaseValue))}>Add Amount</Button>
         <Button
           onClick={() => {
             void dispatch(increaseAsync(increaseValue));
@@ -46,9 +34,7 @@ export function List(): React.ReactElement {
         >
           Add Async
         </Button>
-        <Button onClick={() => dispatch(increaseIfOdd(increaseValue))}>
-          Add If Odd
-        </Button>
+        <Button onClick={() => dispatch(increaseIfOdd(increaseValue))}>Add If Odd</Button>
       </Box>
       <Snackbar
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}

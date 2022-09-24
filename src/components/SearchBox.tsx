@@ -5,20 +5,8 @@ import React from 'react';
 export function SearchBox() {
   return (
     <Box>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        style={{ borderStyle: 'dotted', borderColor: 'red' }}
-      >
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
-          item
-          xs={12}
-        >
+      <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid container alignItems="center" justifyContent="center" item xs={12}>
           <Paper
             component="form"
             sx={{
@@ -28,11 +16,7 @@ export function SearchBox() {
               width: 400,
             }}
           >
-            <InputBase
-              sx={{ ml: 1, flex: 1 }}
-              placeholder="Search"
-              inputProps={{ 'aria-label': 'search' }}
-            />
+            <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search" inputProps={{ 'aria-label': 'search' }} />
             <IconButton type="button" sx={{ p: '15px' }} aria-label="search">
               <SearchIcon />
             </IconButton>

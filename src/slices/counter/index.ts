@@ -13,13 +13,10 @@ const initialState: CounterState = {
   loading: 'idle',
 };
 
-export const increaseAsync = createAsyncThunk(
-  'counter/fetchCount',
-  async (amount: number) => {
-    const response = await fetchCount(amount);
-    return response.data;
-  }
-);
+export const increaseAsync = createAsyncThunk('counter/fetchCount', async (amount: number) => {
+  const response = await fetchCount(amount);
+  return response.data;
+});
 
 export const counterSlice = createSlice({
   name: 'counter',

@@ -6,34 +6,12 @@ import { SearchBox } from '@/components/SearchBox';
 
 export function List(): React.ReactElement {
   return (
-    <Box style={{ borderStyle: 'dashed', borderColor: 'blue' }}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="first-start"
-        alignItems="stretch"
-        style={{ borderStyle: 'dashed', borderColor: 'blue' }}
-      >
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          item
-          xs={12}
-          md={6}
-          style={{ borderStyle: 'dashed', borderColor: 'blue' }}
-        >
+    <Box>
+      <Grid container direction="row" justifyContent="first-start" alignItems="stretch">
+        <Grid container justifyContent="center" alignItems="center" item xs={12} md={6}>
           <SearchBox />
         </Grid>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          item
-          xs={12}
-          md={6}
-          style={{ borderStyle: 'dashed', borderColor: 'blue' }}
-        >
+        <Grid container justifyContent="center" alignItems="center" item xs={12} md={6}>
           <ActionBox />
         </Grid>
       </Grid>

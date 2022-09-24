@@ -17,13 +17,7 @@ export function Tabbar(props: TTabBarProps) {
       onChange={(_event, value) => setTabIndex(value as number)}
     >
       {props.links.map((element, index) => (
-        <Tab
-          key={index}
-          component={Link}
-          to={element.to}
-          label={element.text}
-          color="inherit"
-        />
+        <Tab key={index} component={Link} to={element.to} label={element.text} color="inherit" />
       ))}
     </Tabs>
   );

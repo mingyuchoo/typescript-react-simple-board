@@ -40,32 +40,14 @@ export default function App(): React.ReactElement {
   const title = 'TypeScript React Simple Board';
   return (
     <ThemeProvider theme={theme}>
-      <Grid
-        container
-        direction="column"
-        justifyContent="flex-start"
-        alignItems="stretch"
-        style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
-      >
-        <Grid
-          item
-          xs={12}
-          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
-        >
+      <Grid container direction="column" justifyContent="flex-start" alignItems="stretch">
+        <Grid item xs={12}>
           <Header title={title} links={links} />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
-        >
+        <Grid item xs={12}>
           <Outlet />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          style={{ borderStyle: 'dotted', borderColor: 'yellow' }}
-        >
+        <Grid item xs={12}>
           <Footer />
         </Grid>
       </Grid>
