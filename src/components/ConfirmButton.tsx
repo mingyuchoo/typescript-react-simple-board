@@ -5,16 +5,17 @@ export function ConfirmButton() {
   const [title, setTitle] = useState('Delete');
 
   useEffect(() => {
-    if (title == 'Confirm to delete') {
-      setTimeout(() => {
-        setTitle('Delete');
-      }, 1500);
-    }
-  });
+    const timer = setTimeout(() => {
+      setTitle('Delete');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handler = () => {
     if (title == 'Delete') {
       setTitle('Confirm to delete');
+    } else if (title == 'Confirm to delete') {
+      setTitle('Confirmed');
     }
   };
 
