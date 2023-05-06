@@ -30,8 +30,7 @@ export function List(): React.ReactElement {
           onClick={() => {
             void dispatch(increaseAsync(increaseValue));
             setSnackState(true);
-          }}
-        >
+          }}>
           Add Async
         </Button>
         <Button onClick={() => dispatch(increaseIfOdd(increaseValue))}>Add If Odd</Button>

@@ -14,8 +14,7 @@ export function SearchBox() {
               display: 'flex',
               alignItems: 'center',
               width: 400,
-            }}
-          >
+            }}>
             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search" inputProps={{ 'aria-label': 'search' }} />
             <IconButton type="button" sx={{ p: '15px' }} aria-label="search">
               <SearchIcon />
